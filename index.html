@@ -135,6 +135,10 @@
   .shot:hover img { transform: scale(1.03); }
   .shot figcaption { position: absolute; left: 14px; bottom: 12px; padding: 6px 12px; border-radius: 99px; background: rgba(244, 241, 234, 0.9); color: var(--ink); }
 
+  .video { position: relative; margin-top: 56px; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--night); box-shadow: 0 30px 80px rgba(23, 23, 28, 0.2); }
+  .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .shots.after-video { margin-top: 20px; }
+
   /* Pricing: statement on the left, ticket on the right */
   .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
   .ticket { background: var(--night); color: #efece4; border-radius: 16px; font-family: var(--mono); overflow: hidden; }
@@ -300,11 +304,14 @@
     <div class="head reveal">
       <div>
         <div class="mono">In use</div>
-        <h2 class="serif">Unedited screenshots.</h2>
+        <h2 class="serif">See it in motion.</h2>
       </div>
-      <p class="sub">The same desktop, three different windows in focus.</p>
+      <p class="sub">A 20-second look at Sfumo following focus from window to window, then the same desktop in stills.</p>
     </div>
-    <div class="shots">
+    <div class="video reveal">
+      <iframe src="https://www.youtube-nocookie.com/embed/-R5Gn5TNZ_M?rel=0" title="Sfumo demo video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="shots after-video">
       <figure class="shot reveal"><img src="assets/shot-writing.jpg" alt="A text document in focus with the other windows and wallpaper blurred behind it" loading="lazy"><figcaption class="mono">Writing</figcaption></figure>
       <div class="stack">
         <figure class="shot reveal" style="--d:.08s"><img src="assets/shot-fonts.jpg" alt="Font Book in focus with the rest of the desktop blurred" loading="lazy"><figcaption class="mono">Browsing fonts</figcaption></figure>
@@ -320,7 +327,7 @@
       <div class="reveal">
         <div class="mono">Pricing</div>
         <h2 class="serif">One app.<br>One price.<br>Yours to keep.</h2>
-        <p class="sub">No subscription and no account. Pay once and the download is yours.</p>
+        <p class="sub">No subscription and no account. Pay once and the download is yours. Not for you? Email within 7 days of buying for a full refund.</p>
       </div>
       <div class="ticket reveal" style="--d:.1s">
         <div class="top">$5 <small>one-time</small></div>
@@ -331,6 +338,7 @@
           <li>Apple silicon and Intel</li>
           <li>No account, no tracking</li>
           <li>Works offline</li>
+          <li>7-day refund</li>
         </ol>
         <div class="tear"></div>
         <div class="foot">
@@ -364,6 +372,8 @@
       <details><summary>Does it close or move my windows?</summary><p>No. Sfumo only places a soft overlay behind the window you're using. Turn it off and your desktop is exactly as you left it.</p></details>
       <details><summary>What permissions does it need?</summary><p>None. It doesn't ask for Accessibility or Screen Recording access, and it never connects to the internet.</p></details>
       <details><summary>Why does macOS warn me when I open it?</summary><p>Apps from developers outside Apple's paid programme show that warning. You approve Sfumo once in System Settings › Privacy &amp; Security, and the steps come with the download.</p></details>
+      <details><summary>What is the refund policy?</summary><p>If Sfumo isn't right for you, email <a href="mailto:aru24sin@gmail.com">aru24sin@gmail.com</a> within 7 days of your purchase and you'll get a full refund.</p></details>
+      <details><summary>How do I get help?</summary><p>Email <a href="mailto:aru24sin@gmail.com">aru24sin@gmail.com</a> with any question or problem.</p></details>
       <details><summary>Will it slow my Mac down?</summary><p>It's a tiny menu bar app that uses very little processor time. The blur itself is drawn by macOS.</p></details>
     </div>
   </div>
@@ -377,7 +387,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="year">2026</span> Sfumo</span>
-    <span>Made for people with too many windows open.</span>
+    <span>Contact: <a href="mailto:aru24sin@gmail.com">aru24sin@gmail.com</a> · 7-day refund policy</span>
   </div>
 </footer>
 
