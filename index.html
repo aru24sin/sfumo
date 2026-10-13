@@ -383,7 +383,7 @@
 
 <script>
   // Paste the live Stripe payment link here. While it is empty the buy buttons only scroll to pricing.
-  const BUY_URL = "";
+  const BUY_URL = "https://buy.stripe.com/3cIcN43Pl21Jeh3csf18c00";
 
   document.querySelectorAll("[data-buy]").forEach((link) => { if (BUY_URL) link.href = BUY_URL; });
   if (!BUY_URL) document.getElementById("buyNote").textContent = "Checkout opens soon.";
